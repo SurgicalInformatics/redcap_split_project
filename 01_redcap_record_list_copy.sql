@@ -12,8 +12,9 @@
 -- mofified to use variables
 -- Tim Shaw 18-Aug-2020 
 
-SET @source_project = 64, @target_project = 68;
-SET @DAG_ids = '5319, 5457'
+SET @source_project = 64;
+SET @target_project = 68;
+SET @DAG_ids = '5319, 5457';
 
 insert into redcap_record_list
 select target_dag.project_id,
