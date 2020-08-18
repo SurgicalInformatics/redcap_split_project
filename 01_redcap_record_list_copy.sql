@@ -26,4 +26,4 @@ select target_dag.project_id,
     inner join redcap_data_access_groups target_dag on target_dag.group_name = source_dag.group_name
         where source_dag.project_id = @source_project
           and target_dag.project_id = @target_project
-          and source_record.dag_id in @DAG_ids
+          and source_record.dag_id in (@DAG_ids)
