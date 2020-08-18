@@ -1,10 +1,9 @@
 -- this script copies specified records in redcap_record_list
 -- from Source project to Target project
--- need to edit:
--- where source_arm.project_id = 64 -- Source project ID
---   and target_arm.project_id = 68 -- Target project ID
--- and value in (5319, 5457) -- DAG IDs to copy
--- DAG IDs as in the Source project.
+-- need to edit variables:
+-- source_project = xx
+-- target_project = yy
+-- source DAG_ids = '1,2,3...'
 -- After running this script, empty records (grey buttons)
 -- should show up in the interface
 -- Riinu Pius 14-Aug 2020
