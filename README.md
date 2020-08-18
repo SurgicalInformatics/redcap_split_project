@@ -1,4 +1,4 @@
-These scripts can be used to split up a large REDCap into separate smaller onces based on Data Access Groups (DAGs).
+These scripts can be used to split up a large REDCap into separate smaller ones based on Data Access Groups (DAGs).
 
 `00_redcap_project_data_tables.sql` is just for investigating and double checking the structure.
 
