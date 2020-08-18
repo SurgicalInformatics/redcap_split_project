@@ -1,11 +1,10 @@
 -- this script inserts the DAG info for each DAG into redcap_data
 -- redcap_record_list already knows this info, but it must be duplicated for
 -- the interface to work properly.
--- need to edit:
--- where source_arm.project_id = 64 -- Source project ID
---   and target_arm.project_id = 68 -- Target project ID
--- and value in (5319, 5457) -- DAG IDs to copy
--- DAG IDs as in the Source project.
+need to edit:
+-- @source_project = 64 -- Source project ID
+-- @target_project = 68 -- Target project ID
+-- @DAG_ids = (5319, 5457) -- DAG IDs in the source project owning records to be copied
 -- Riinu Pius 14-Aug 2020
 
 -- mofified to use variables
