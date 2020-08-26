@@ -7,7 +7,7 @@ SET @source_project = 16;
 SET @target_project = 37;
 SET @role_name = 'Data Entry';
 -- Blackpool and Bolton for testing
-SET @DAG_ids = '122, 272';
+SET @DAG_ids = '122, 276';
 
 
 insert into redcap_user_rights
