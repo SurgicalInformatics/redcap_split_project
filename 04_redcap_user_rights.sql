@@ -36,7 +36,7 @@ inner join redcap_data_access_groups target_dag
 -- Find target role
 inner join redcap_user_roles target_role
         on target_role.role_name = source_role.role_name
-       and target_role.project_id = source_role.project_id
+       and target_role.project_id = target_dag.project_id
 -- Parameters
 where source_role.role_name = @role_name
       and source_dag.project_id = @source_project
