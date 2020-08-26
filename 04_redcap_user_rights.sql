@@ -7,7 +7,9 @@ SET @source_project = 16;
 SET @target_project = 37;
 SET @role_name = 'Data Entry';
 -- Blackpool and Bolton for testing
-SET @DAG_ids = '122, 276';
+-- SET @DAG_ids = '122, 276';
+-- just Blackpool
+SET @DAG_ids = 122;
 
 
 insert into redcap_user_rights
@@ -34,10 +36,10 @@ inner join redcap_data_access_groups target_dag
 -- Find target role
 inner join redcap_user_roles target_role
         on target_role.role_name = source_role.role_name
-       and target_role.project_id = target_dag.role_id
+       and target_role.project_id = source_role.project_id
 -- Parameters
-where source_role.role_name in (@role_name)
+where source_role.role_name = @role_name
       and source_dag.project_id = @source_project
       and target_dag.project_id = @target_project
-      and source_rights.group_id in (@DAG_ids)
+      and source_rights.group_id = @DAG_ids
 ;
