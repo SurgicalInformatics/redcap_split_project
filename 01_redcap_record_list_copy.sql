@@ -14,7 +14,10 @@
 SET @source_project = 16;
 SET @target_project = 37;
 -- Blackpool and Bolton for testing
-SET @DAG_ids = '122, 276';
+-- SET @DAG_ids = '122, 276';
+-- just Blackpool
+SET @DAG_ids = 122;
+
 
 insert into redcap_record_list
 select target_dag.project_id,
@@ -27,4 +30,4 @@ select target_dag.project_id,
     inner join redcap_data_access_groups target_dag on target_dag.group_name = source_dag.group_name
         where source_dag.project_id = @source_project
           and target_dag.project_id = @target_project
-          and source_record.dag_id in (@DAG_ids)
+          and source_record.dag_id = @DAG_ids

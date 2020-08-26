@@ -17,7 +17,9 @@
 SET @source_project = 16;
 SET @target_project = 37;
 -- Blackpool and Bolton for testing
-SET @DAG_ids = '122, 276';
+-- SET @DAG_ids = '122, 276';
+-- just Blackpool
+SET @DAG_ids = 122;
 
 insert into redcap_data
 select target_arm.project_id,
@@ -55,5 +57,5 @@ where source_arm.project_id = @source_project
     select record from redcap_data
      where field_name = '__GROUPID__'
        and project_id = source_arm.project_id
-       and value in (@DAG_ids) -- DAG IDs to copy
+       and value = @DAG_ids -- DAG IDs to copy
   ) and field_name != '__GROUPID__'
