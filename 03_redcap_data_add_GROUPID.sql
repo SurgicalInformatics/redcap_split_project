@@ -8,11 +8,12 @@
 -- Riinu Pius 14-Aug 2020
 
 -- mofified to use variables
--- Tim Shaw 18-Aug-2020 
+-- Tim Shaw 18-Aug-2020
 
-SET @source_project = 64;
-SET @target_project = 68;
-SET @DAG_ids = '5319, 5457';
+SET @source_project = 16;
+SET @target_project = 37;
+-- Blackpool and Bolton for testing
+SET @DAG_ids = '122, 276';
 
 insert into redcap_data
 select target_arm.project_id,
