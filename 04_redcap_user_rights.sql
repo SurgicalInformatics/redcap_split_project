@@ -4,7 +4,7 @@
 -- Riinu Pius 26-Aug 2020
 
 SET @source_project = 16;
-SET @target_project = 37;
+SET @target_project = 39;
 -- just Birmingham:
 SET @DAG_ids = 404;
 
