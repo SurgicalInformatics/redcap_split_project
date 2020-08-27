@@ -21,6 +21,7 @@ select target_dag.project_id,
         where source_dag.project_id = 16
           and target_dag.project_id = 37
           and source_record.dag_id = 110
+;
 
 
 ----------
@@ -64,6 +65,7 @@ where source_arm.project_id = 16
        and project_id = source_arm.project_id
        and value = 110 -- DAG IDs to copy
   ) and field_name != '__GROUPID__'
+;
 
 
 ----------
@@ -113,6 +115,7 @@ where source_arm.project_id = 16
        and project_id = source_arm.project_id
        and value = 110-- DAG IDs to copy
   ) and field_name = '__GROUPID__'
+;
 
 
 ----------

@@ -19,6 +19,7 @@ select target_dag.project_id,
         where source_dag.project_id = {source_project}
           and target_dag.project_id = {target_project}
           and source_record.dag_id = {DAG_id}
+;
 "
 
 sql_02 = "
@@ -63,6 +64,7 @@ where source_arm.project_id = {source_project}
        and project_id = source_arm.project_id
        and value = {DAG_id} -- DAG IDs to copy
   ) and field_name != '__GROUPID__'
+;
 "
 
 sql_03 = "
@@ -113,6 +115,7 @@ where source_arm.project_id = {source_project}
        and project_id = source_arm.project_id
        and value = {DAG_id}-- DAG IDs to copy
   ) and field_name = '__GROUPID__'
+;
 "
 
 sql_04 = "
@@ -170,7 +173,8 @@ mysource = 16
 mytarget = 37
 
 
-regions_lookup = read_csv("dags_regions.csv")
+#regions_lookup = read_csv("dags_regions.csv")
+regions_lookup = read_csv("https://raw.githubusercontent.com/SurgicalInformatics/redcap_split_project/153fdbcaa874759ac084e437a6ac59fd313698bb/dags_regions.csv")
 
 do_region = regions_lookup %>% 
   filter(nhs_region == myregion) %>% 
