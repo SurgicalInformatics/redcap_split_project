@@ -1,0 +1,232 @@
+dag_label,nhs_region,group_id
+Chesterfield Royal Hospital NHSFT,East Midlands,318
+Derbyshire Healthcare NHSFT,East Midlands,1198
+Kettering General Hospital NHSFT,East Midlands,93
+Leicestershire Partnership NHS Trust,East Midlands,808
+Lincolnshire Partnership Foundation Trust,East Midlands,949
+Northampton General Hospital NHS Trust,East Midlands,339
+Nottinghamshire Healthcare NHS Foundation Trust,East Midlands,807
+Nottingham University Hosptials NHS Trust,East Midlands,31
+Sherwood Forest Hospitals NHSFT,East Midlands,265
+Shropshire Community Health NHS Trust,East Midlands,787
+United Lincolnshire Hospital NHST,East Midlands,307
+University Hospitals of Derby and Burton NHFT,East Midlands,370
+University Hospitals of Leicester,East Midlands,182
+Lincolnshire Community Health Services NHST,East Midlands,948
+Addenbrookes Hospital,East of England,244
+Basildon and Thurrock University Hospitals NHS,East of England,429
+Bedfordshire Hospitals NHS Foundation Trust,East of England,328
+Cambridge and Peterborough NHS Foundation Trust,East of England,686
+East and North Hertfordshire NHST,East of England,286
+East Suffolk and North Essex NHFT,East of England,380
+Hertfordshire Partnership NHS Foundation Trust,East of England,749
+Ipswich Hospital,East of England,46
+James Paget University Hospitals,East of England,311
+Luton and Dunstable,East of England,544
+Mid and South Essex University Hospitals Group,East of England,150
+Milton Keynes University Hospital,East of England,51
+Norfolk and Norwich University Hospital NHSFT,East of England,197
+Norfolk and Suffolk NHS Foundation Trust,East of England,750
+Norfolk Community Health and Care NHS Trust,East of England,1591
+North West Anglia NHSFT,East of England,285
+Royal Papworth Hospital NHSFT,East of England,56
+The Princess Alexandra Hospital,East of England,130
+The Queen Elizabeth Hospital King's Lynn NHS Foundation Trust,East of England,388
+West Hertfordshire Hospitals NHST,East of England,152
+West Suffolk Hospital,East of England,120
+Barking Havering and Redbridge University NHST,London,192
+Chelsea & Westminster Hospital,London,140
+Croydon Health Services NHS Trust,London,551
+Epsom & St Helier NHSFT,London,145
+Great Ormond Street Hospital,London,300
+Guys and St Thomas,London,75
+Hillingdon Hospital,London,74
+Homerton University Hospital,London,98
+Hounslow and Richmond Community Healthcare NHS Trust,London,937
+Imperial College Healthcare NHST,London,168
+King's College Hospital,London,132
+Kingston Hospital NHS Foundation Trust,London,712
+Lewisham and Greenwich NHS Trust,London,338
+London North West University Healthcare NHS Trust,London,760
+North Middlesex University Hospital NHST,London,278
+Northwick Park,London,114
+Royal Brompton and Harefield NHFT,London,368
+Royal Free Hospital,London,45
+St Bartholomews,London,312
+St George's University Hospitals NHS Foundation Trust,London,748
+The Royal Marsden NHST,London,224
+University College London Hospitals NHSFT,London,287
+Whittington Health NHST,London,271
+Barts Health NHS Trust,London,153
+South West London and St George's Mental Health NHS Trust,London,804
+Airedale General Hospital,North East and Yorkshire,43
+Barnsley Hospital NHS Foundation Trust,North East and Yorkshire,40
+Bradford District Care NHS Foundation Trust,North East and Yorkshire,806
+Bradford Teaching Hospitals NHSFT,North East and Yorkshire,250
+Calderdale and Huddersfield NHS Trust,North East and Yorkshire,542
+"Cumbria, Northumberland, Tyne and Wear NHS Foundation Trust",North East and Yorkshire,685
+Darlington Memorial Hospital,North East and Yorkshire,251
+Doncaster and Bassetlaw Teaching Hospitals NHFT,North East and Yorkshire,399
+Gateshead Health NHSFT,North East and Yorkshire,235
+Harrogate District Hospital,North East and Yorkshire,313
+Hull University Teaching Hospitals,North East and Yorkshire,121
+Humber Teaching NHS Foundation Trust,North East and Yorkshire,732
+Leeds and York Partnership NHS Foundation Trust,North East and Yorkshire,742
+Leeds community healthcare NHSFT,North East and Yorkshire,1345
+Leeds Teaching Hospitals NHST,North East and Yorkshire,284
+Mid Yorkshire Hospitals NHST,North East and Yorkshire,245
+North Cumbria Integrated Care NHSFT,North East and Yorkshire,201
+Northern Lincolnshire and Goole NHSFT,North East and Yorkshire,296
+Northumbria Healthcare NHS Trust,North East and Yorkshire,471
+Rotherham Doncaster and South Humber NHSFT,North East and Yorkshire,765
+Sheffield Children's NHS Foundation Trust,North East and Yorkshire,334
+Sheffield Health,North East and Yorkshire,716
+Sheffield Teaching Hospitals NHS Foundation Trust,North East and Yorkshire,84
+South Tees Hospital NHS Foundation Trust,North East and Yorkshire,357
+South Tyneside and Sunderland NHS Foundation Trust,North East and Yorkshire,759
+South West Yorkshire Partnership NHS Foundation Trust,North East and Yorkshire,670
+"Tees, Esk and Wear Valleys NHS Foundation Trust",North East and Yorkshire,683
+The Newcastle upon Tyne Hospitals NHSFT,North East and Yorkshire,60
+The Rotherham NHSFT,North East and Yorkshire,270
+University Hospital of North Durham,North East and Yorkshire,268
+University Hospital of North Tees,North East and Yorkshire,144
+West Cumberland Hospital,North East and Yorkshire,241
+York Teaching Hospital NHS Foundation Trust,North East and Yorkshire,39
+County Durham and Darlington Foundation Trust,North East and Yorkshire,1199
+Belfast,Northern Ireland,1612
+NI Southern Trust,Northern Ireland,1581
+NI Northern Trust,Northern Ireland,1584
+NI Western Trust,Northern Ireland,1583
+NI South Eastern Trust,Northern Ireland,1582
+Aintree University Hospital,North West,160
+Alder Hey Children's Hospital,North West,99
+Blackpool Teaching Hospitals NHSFT,North West,122
+Bolton NHST,North West,276
+Cheshire and Wirral Partnership NHSFT,North West,597
+Clatterbridge Cancer Centre NHSFT,North West,805
+Countess Of Chester Hospital,North West,236
+East Lancashire Hospitals NHST,North West,213
+Fairfield General Hospital,North West,422
+Lancashire & South Cumbria NHS Foundation Trust,North West,549
+Liverpool Women's Hospital,North West,470
+Macclesfield District General Hospital,North West,267
+Manchester University NHS Foundation Trust,North West,37
+Merseycare NHS Foundation Trust,North West,547
+Mid Cheshire Hospital Trust,North West,239
+North West Boroughs Healthcare NHSFT,North West,603
+Royal Albert Edward Infirmary,North West,293
+Royal Liverpool & Broadgreen University Hospitals NHSFT,North West,128
+Royal Preston Hospital,North West,107
+Salford Royal NHSFT,North West,55
+Southport and Ormskirk Hospital NHS Trust,North West,375
+Stockport NHSFT,North West,181
+Tameside Hospital Integrated Care NHSFT,North West,179
+The Christie NHSFT,North West,291
+The Pennine Acute Hospitals NHS Trust,North West,110
+The Royal Oldham Hospital,North West,242
+University Hospitals Of Morecambe Bay,North West,233
+Warrington and Halton Teaching Hospitals NHS Foundation Trust,North West,333
+Whiston Hospital,North West,52
+Wirral University Teaching Hospital NHFT,North West,398
+St Helens,North West,790
+Aberdeen Royal Infirmary,Scotland,109
+Borders General Hospital,Scotland,545
+Glasgow Royal Infirmary,Scotland,183
+Golden Jubilee National Hospital,Scotland,747
+NHS Ayrshire and Arran,Scotland,599
+NHS Dumfries and Galloway,Scotland,601
+NHS Forth Valley,Scotland,767
+NHS Highland,Scotland,802
+NHS Lanarkshire,Scotland,584
+NHS Lothian,Scotland,620
+Ninewells Hospital,Scotland,117
+"Queen Elizabeth University Hospital, Glasgow University Hospital Monklands Airdrie",Scotland,101
+Victoria Hospital Kirkcaldy,Scotland,216
+NHS Orkney,Scotland,1585
+Ashford and St Peters Hospital NHSFT,South East,258
+Brighton and Sussex University Hospitals NHST,South East,80
+Buckinghamshire Healthcare NHS Trust,South East,289
+Dartford and Gravesham NHS Trust,South East,744
+East Kent Hospitals NHSFT,South East,106
+East Sussex Healthcare NHS Trust,South East,403
+Frimley Health NHSFT,South East,62
+Hampshire Hospitals NHS Foundation Trust,South East,151
+Isle of Wight NHS Trust,South East,602
+Kent and Medway NHS and Social Care Partnership Trust,South East,1580
+Maidstone and Tunbridge Wells NHST,South East,115
+Medway Community Healthcare,South East,763
+Medway NHSFT,South East,41
+Oxford University Hospitals NHSFT,South East,49
+Portsmouth Hospitals NHS Trust,South East,147
+Royal Berkshire Hospital,South East,123
+Royal Surrey NHSFT,South East,42
+Solent NHS Trust,South East,810
+Southern Health NHS Foundation Trust,South East,665
+Surrey and Borders partnership NHSFT,South East,1587
+Surrey and Sussex Healthcare NHST,South East,363
+Sussex Community NHSFT,South East,779
+Sussex Partnership NHS Foundation Trust,South East,957
+University Hospital Southampton NHS Foundation Trust,South East,111
+Western Sussex Hospitals NHSFT,South East,324
+Bristol Royal Infirmary,South West,282
+Cornwall Partnership NHSFT,South West,752
+Devon Partnership NHS Trust,South West,740
+Dorset County Hospital NHFT,South West,361
+Dorset HealthCare University NHS Foundation Trust,South West,964
+Gloucester Royal Hospital,South West,95
+Gloucestershire Health and Care NHS Foundation Trust,South West,666
+Great Western NHS FT,South West,468
+Livewell Southwest,South West,746
+Musgrove Park Hospital,South West,71
+NIHR Team (Wessex),South West,555
+Northern Devon Healthcare Trust,South West,89
+Poole Hospital NHST,South West,57
+Royal Bournemouth and Christchurch Hospitals NHS Foundation Trust,South West,330
+Royal Cornwall,South West,564
+Royal Devon and Exeter Hospital,South West,127
+Royal United Hospitals Bath NHSFT,South West,180
+Southmead Hospital,South West,65
+Torbay and south Devon Hospital,South West,32
+University Hospital Plymouth,South West,44
+University Hospitals Bristol NHFT,South West,392
+Weston Area Health NHS Trust,South West,598
+Yeovil District Hospital,South West,35
+Salisbury NHS Foundation Trust,South West,1197
+Aneurin Bevan University Health Board,Wales,359
+Betsi Cadwaladr University Health Board,Wales,243
+Bronglais General Hospital,Wales,366
+Cardiff and Vale University Health Board,Wales,208
+Cwm Taf Morgannwg University Health Board,Wales,354
+Glan Clwyd Hospital,Wales,292
+Glangwili General Hospital,Wales,228
+"Morriston Hospital, Swansea",Wales,262
+Prince Philip Hospital,Wales,204
+University Hospital of Wales,Wales,358
+Withybush General Hospital,Wales,302
+Wrexham Maelor Hospital,Wales,390
+Hywel Dda University Health Board,Wales,389
+Coventry & Warwickshire Partnership Trust,West Midlands,769
+George Eliot Hospital,West Midlands,146
+Hereford Hospital,West Midlands,156
+Midlands Partnership NHS Foundation Trust,West Midlands,743
+North Staffordshire Combined Healthcare NHS Trust,West Midlands,789
+Robert Jones & Agnes Hunt Orthopaedic Hospital NHS Foundation Trust,West Midlands,780
+Sandwell and West Birmingham NHST,West Midlands,212
+Shrewsbury & Telford Hospital NHST,West Midlands,314
+The Dudley Group NHSFT,West Midlands,273
+The Royal Orthopaedic Hospital NHS Foundation Trust,West Midlands,1597
+The Royal Wolverhampton NHS Trust,West Midlands,207
+University Hospitals Coventry and Warwickshire NHS Trust,West Midlands,136
+University Hospitals of North Midlands NHST,West Midlands,260
+Warwick Hospital,West Midlands,316
+Worcestershire Acute Hospitals NHS Trust,West Midlands,335
+Worcestershire Health and Care NHS Trust,West Midlands,668
+Walsall Healthcare NHST,West Midlands,187
+University Hospitals Birmingham NHS Foundation Trust,West Midlands,404
+Birmingham and Solihull Mental Health NHSFT,West Midlands,764
+Birmingham Community Healthcare NHS Foundation Trust,West Midlands,667
+Birmingham Women's & Children's NHS Foundation Trust,West Midlands,47
+Black Country Healthcare NHS Foundation Trust,West Midlands,786
+Wellcome Trust,NA,424
+Queen Victoria Hospital,NA,472
+NA,NA,NA
