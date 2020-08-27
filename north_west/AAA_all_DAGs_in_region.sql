@@ -1,9 +1,11 @@
-library(tidyverse)
-library(glue)
-library(snakecase)
+-- The project_id and DAG ID numbers within this script have been inserted using
+-- a script, not by hand.
+-- This script copies
+-- All DAGs within this region
+-- data from the original (full) project to:
+-- 'CCP UK SARI - North West'
 
-# read in SQL templates include R-glue placeholders: {} ----
-sql_01 = "
+
 ----------
 -- 01_redcap_record_list_copy.sql
 ----------
@@ -13,16 +15,15 @@ select target_dag.project_id,
        source_record.record,
        target_dag.group_id,
        source_record.sort
-  from redcap_record_list source_record
+	from redcap_record_list source_record
     inner join redcap_data_access_groups source_dag on source_dag.group_id = source_record.dag_id
     inner join redcap_data_access_groups target_dag on target_dag.group_name = source_dag.group_name
-        where source_dag.project_id = {source_project}
-          and target_dag.project_id = {target_project}
-          and source_record.dag_id = {DAG_id}
+        where source_dag.project_id = 16
+          and target_dag.project_id = 37
+          and source_record.dag_id in (37,260,160,128,122,213,242,236,398,181,276,293,107,422,110,179,52,333,239,55,375,267,547,597,291,603,549,99,470,805,790)
 ;
-"
 
-sql_02 = "
+
 ----------
 -- 02_redcap_data_copy.sql
 ----------
@@ -56,18 +57,17 @@ inner join redcap_events_metadata target_event
        and target_event.arm_id = target_arm.arm_id
 
 -- Input parameters
-where source_arm.project_id = {source_project}
-  and target_arm.project_id = {target_project}
+where source_arm.project_id = 16
+  and target_arm.project_id = 37
   and record.record in (
     select record from redcap_data
      where field_name = '__GROUPID__'
        and project_id = source_arm.project_id
-       and value = {DAG_id} -- DAG IDs to copy
+       and value in (37,260,160,128,122,213,242,236,398,181,276,293,107,422,110,179,52,333,239,55,375,267,547,597,291,603,549,99,470,805,790) -- DAG IDs to copy
   ) and field_name != '__GROUPID__'
 ;
-"
 
-sql_03 = "
+
 ----------
 -- 03_redcap_data_add_GROUPID.sql
 ----------
@@ -107,18 +107,17 @@ inner join redcap_record_list target_list
        and target_list.record = record.record
 
 -- Input parameters
-where source_arm.project_id = {source_project}
-  and target_arm.project_id = {target_project}
+where source_arm.project_id = 16
+  and target_arm.project_id = 37
   and record.record in (
     select record from redcap_data
      where field_name = '__GROUPID__'
        and project_id = source_arm.project_id
-       and value = {DAG_id}-- DAG IDs to copy
+       and value in (37,260,160,128,122,213,242,236,398,181,276,293,107,422,110,179,52,333,239,55,375,267,547,597,291,603,549,99,470,805,790)-- DAG IDs to copy
   ) and field_name = '__GROUPID__'
 ;
-"
 
-sql_04 = "
+
 ----------
 -- 04_redcap_user_rights.sql
 ----------
@@ -150,82 +149,7 @@ inner join redcap_user_roles target_role
        and target_role.project_id = target_dag.project_id
 -- Parameters
 where source_role.role_name = @role_name
-      and source_dag.project_id = {source_project}
-      and target_dag.project_id = {target_project}
-      and source_rights.group_id = {DAG_id}
+      and source_dag.project_id = 16
+      and target_dag.project_id = 37
+      and source_rights.group_id in (37,260,160,128,122,213,242,236,398,181,276,293,107,422,110,179,52,333,239,55,375,267,547,597,291,603,549,99,470,805,790)
 ;
-"
-
-# glue together with the DAG IDs (and project IDs)
-preamble = "
--- The project_id and DAG ID numbers within this script have been inserted using
--- a script, not by hand.
--- This script copies
--- {DAG_name}
--- data from the original (full) project to:
--- 'CCP UK SARI - {nhs_region}'
-"
-sql = paste(preamble, sql_01, sql_02, sql_03, sql_04, sep = "\n")
-
-
-myregion = "North West"
-mysource = 16
-mytarget = 37
-
-
-#regions_lookup = read_csv("dags_regions.csv")
-regions_lookup = read_csv("https://raw.githubusercontent.com/SurgicalInformatics/redcap_split_project/153fdbcaa874759ac084e437a6ac59fd313698bb/dags_regions.csv")
-
-do_region = regions_lookup %>% 
-  filter(nhs_region == myregion) %>% 
-  select(nhs_region, DAG_name = redcap_data_access_group_label, DAG_id = data_access_group_id) %>% 
-  mutate(source_project = mysource, target_project = mytarget,
-         sql_onedag = glue(sql),
-         filename = paste0(to_snake_case(DAG_name), ".sql"))
-
-all_dags_within_region = do_region %>% 
-  pull(DAG_id) %>% 
-  paste(collapse = ",")
-
-all_in_one = tibble(source_project = mysource,
-                    target_project = mytarget,
-                    nhs_region = myregion, 
-                    DAG_id = all_dags_within_region,
-                    DAG_name = "All DAGs within this region",
-                    sql = sql) %>% 
-  mutate(sql = str_replace_all(sql, "= \\{DAG_id\\}", "in ({DAG_id})"),
-         sql_alldags = glue(sql))
-
-all_in_one %>% 
-  pull(sql_alldags) %>% 
-  write_file(paste(to_snake_case(myregion), "AAA_all_DAGs_in_region.sql", sep = "/"))
-
-
-system(paste("mkdir", to_snake_case(myregion)))
-for (myfilename in do_region$filename){
-  print(myfilename)
-  do_region %>%
-    filter(filename == myfilename) %>%
-    pull(sql_onedag) %>%
-    write_file(paste(to_snake_case(myregion), myfilename, sep = "/"))
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
