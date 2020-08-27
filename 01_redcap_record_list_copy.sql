@@ -4,17 +4,14 @@
 -- source_project = xx
 -- target_project = yy
 -- source DAG_ids = '1,2,3...'
+-- (if using SET can only do one at a time)
 -- After running this script, empty records (grey buttons)
 -- should show up in the interface
--- Riinu Pius 14-Aug 2020
-
--- mofified to use variables
--- Tim Shaw 18-Aug-2020
 
 SET @source_project = 16;
 SET @target_project = 39;
 -- just Birmingham:
-SET @DAG_ids = 404;
+SET @DAG_id = 404;
 
 
 insert into redcap_record_list
@@ -23,9 +20,10 @@ select target_dag.project_id,
        source_record.record,
        target_dag.group_id,
        source_record.sort
-	from redcap_record_list source_record
+    from redcap_record_list source_record
     inner join redcap_data_access_groups source_dag on source_dag.group_id = source_record.dag_id
     inner join redcap_data_access_groups target_dag on target_dag.group_name = source_dag.group_name
         where source_dag.project_id = @source_project
           and target_dag.project_id = @target_project
-          and source_record.dag_id = @DAG_ids
+          and source_record.dag_id = @DAG_id
+;

@@ -1,12 +1,11 @@
 -- this script copies the users over to the new project
 -- it updates the role_id as well as the group_id
 -- this is the final script and project should be ready to go after this
--- Riinu Pius 26-Aug 2020
 
 SET @source_project = 16;
 SET @target_project = 39;
 -- just Birmingham:
-SET @DAG_ids = 404;
+SET @DAG_id = 404;
 
 SET @role_name = 'Data Entry';
 
@@ -39,5 +38,5 @@ inner join redcap_user_roles target_role
 where source_role.role_name = @role_name
       and source_dag.project_id = @source_project
       and target_dag.project_id = @target_project
-      and source_rights.group_id = @DAG_ids
+      and source_rights.group_id = @DAG_id
 ;

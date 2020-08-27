@@ -1,32 +1,58 @@
 -- The project_id and DAG ID numbers within this script have been inserted using
 -- a script, not by hand.
 -- This script copies
--- Wirral University Teaching Hospital NHFT
+-- All DAGs within this region
 -- data from the original (full) project to:
 -- 'CCP UK SARI - North West'
 
+-- this script copies specified records in redcap_record_list
+-- from Source project to Target project
+-- need to edit variables:
+-- source_project = xx
+-- target_project = yy
+-- source DAG_ids = '1,2,3...'
+-- (if using -- SET can only do one at a time)
+-- After running this script, empty records (grey buttons)
+-- should show up in the interface
 
-----------
--- 01_redcap_record_list_copy.sql
-----------
+-- SET @source_project = 16;
+-- SET @target_project = 39;
+-- just Birmingham:
+-- SET @DAG_id = 404;
+
+
 insert into redcap_record_list
 select target_dag.project_id,
        source_record.arm,
        source_record.record,
        target_dag.group_id,
        source_record.sort
-	from redcap_record_list source_record
+    from redcap_record_list source_record
     inner join redcap_data_access_groups source_dag on source_dag.group_id = source_record.dag_id
     inner join redcap_data_access_groups target_dag on target_dag.group_name = source_dag.group_name
         where source_dag.project_id = 16
           and target_dag.project_id = 37
-          and source_record.dag_id = 398
+          and source_record.dag_id in (160,99,122,276,597,805,236,213,422,549,470,267,37,547,239,603,293,128,107,55,375,181,179,291,110,242,233,333,52,398,790)
 ;
 
+-- this script copies specified records in redcap_data
+-- from Source project to Target project
+-- need to edit:
+-- @source_project = 64 -- Source project ID
+-- @target_project = 68 -- Target project ID
+-- @DAG_ids = (5319, 5457) -- DAG IDs in the source project owning records to be copied
+-- The script will copy all records into the Target project
+-- the scripts will be in appropriate DAGs, as that was already determined in redcap_record_list
+-- but the interface will not present the DAG info, as that needs to be duplicately stored in redcap_data
+-- as well, as is done in the next script.
+-- The next script will move them into DAGs
 
-----------
--- 02_redcap_data_copy.sql
-----------
+
+-- SET @source_project = 16;
+-- SET @target_project = 39;
+-- just Birmingham:
+-- SET @DAG_id = 404;
+
 insert into redcap_data
 select target_arm.project_id,
        target_event.event_id,
@@ -63,14 +89,23 @@ where source_arm.project_id = 16
     select record from redcap_data
      where field_name = '__GROUPID__'
        and project_id = source_arm.project_id
-       and value = 398 -- DAG IDs to copy
+       and value in (160,99,122,276,597,805,236,213,422,549,470,267,37,547,239,603,293,128,107,55,375,181,179,291,110,242,233,333,52,398,790) -- DAG ID to copy
   ) and field_name != '__GROUPID__'
 ;
+-- this script inserts the DAG info for each DAG into redcap_data
+-- redcap_record_list already knows this info, but it must be duplicated for
+-- the interface to work properly.
+-- need to edit:
+-- @source_project = 64 -- Source project ID
+-- @target_project = 68 -- Target project ID
+-- @DAG_ids = (5319, 5457) -- DAG IDs in the source project owning records to be copied
 
 
-----------
--- 03_redcap_data_add_GROUPID.sql
-----------
+-- SET @source_project = 16;
+-- SET @target_project = 39;
+-- just Birmingham:
+-- SET @DAG_id = 404;
+
 insert into redcap_data
 select target_arm.project_id,
        target_event.event_id,
@@ -113,15 +148,20 @@ where source_arm.project_id = 16
     select record from redcap_data
      where field_name = '__GROUPID__'
        and project_id = source_arm.project_id
-       and value = 398-- DAG IDs to copy
+       and value in (160,99,122,276,597,805,236,213,422,549,470,267,37,547,239,603,293,128,107,55,375,181,179,291,110,242,233,333,52,398,790) -- DAG IDs to copy
   ) and field_name = '__GROUPID__'
 ;
+-- this script copies the users over to the new project
+-- it updates the role_id as well as the group_id
+-- this is the final script and project should be ready to go after this
 
+-- SET @source_project = 16;
+-- SET @target_project = 39;
+-- just Birmingham:
+-- SET @DAG_id = 404;
 
-----------
--- 04_redcap_user_rights.sql
-----------
-SET @role_name = 'Data Entry';
+-- SET @role_name = 'Data Entry';
+
 insert into redcap_user_rights
 (
     project_id,
@@ -148,8 +188,8 @@ inner join redcap_user_roles target_role
         on target_role.role_name = source_role.role_name
        and target_role.project_id = target_dag.project_id
 -- Parameters
-where source_role.role_name = @role_name
+where source_role.role_name = 'Data Entry'
       and source_dag.project_id = 16
       and target_dag.project_id = 37
-      and source_rights.group_id = 398
+      and source_rights.group_id in (160,99,122,276,597,805,236,213,422,549,470,267,37,547,239,603,293,128,107,55,375,181,179,291,110,242,233,333,52,398,790)
 ;

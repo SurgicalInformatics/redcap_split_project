@@ -9,15 +9,12 @@
 -- but the interface will not present the DAG info, as that needs to be duplicately stored in redcap_data
 -- as well, as is done in the next script.
 -- The next script will move them into DAGs
--- Riinu Pius 14-Aug 2020
 
--- mofified to use variables
--- Tim Shaw 18-Aug-2020
 
 SET @source_project = 16;
 SET @target_project = 39;
 -- just Birmingham:
-SET @DAG_ids = 404;
+SET @DAG_id = 404;
 
 insert into redcap_data
 select target_arm.project_id,
@@ -55,5 +52,6 @@ where source_arm.project_id = @source_project
     select record from redcap_data
      where field_name = '__GROUPID__'
        and project_id = source_arm.project_id
-       and value = @DAG_ids -- DAG IDs to copy
+       and value = @DAG_id -- DAG ID to copy
   ) and field_name != '__GROUPID__'
+;
