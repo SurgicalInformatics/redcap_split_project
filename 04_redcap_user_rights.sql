@@ -8,6 +8,7 @@ SET @target_project = 39;
 -- just Birmingham:
 SET @DAG_ids = 404;
 
+SET @role_name = 'Data Entry';
 
 insert into redcap_user_rights
 (
