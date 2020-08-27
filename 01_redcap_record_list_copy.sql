@@ -13,10 +13,8 @@
 
 SET @source_project = 16;
 SET @target_project = 37;
--- Blackpool and Bolton for testing
--- SET @DAG_ids = '122, 276';
--- just Blackpool
-SET @DAG_ids = 122;
+-- just Birmingham:
+SET @DAG_ids = 404;
 
 
 insert into redcap_record_list
