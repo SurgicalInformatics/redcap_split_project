@@ -13,7 +13,7 @@ select target_dag.project_id,
        source_record.record,
        target_dag.group_id,
        source_record.sort
-	from redcap_record_list source_record
+  from redcap_record_list source_record
     inner join redcap_data_access_groups source_dag on source_dag.group_id = source_record.dag_id
     inner join redcap_data_access_groups target_dag on target_dag.group_name = source_dag.group_name
         where source_dag.project_id = {source_project}
