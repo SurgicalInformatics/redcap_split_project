@@ -65,7 +65,7 @@ for (myregion in regional_projects$nhs_region){
   
   all_in_one %>% 
     pull(sql_alldags) %>% 
-    write_file(paste("regional_files/", to_snake_case(myregion), ".sql"))
+    write_file(paste0("regional_files/", to_snake_case(myregion), ".sql"))
   
   
 }
