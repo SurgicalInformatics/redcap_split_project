@@ -32,7 +32,7 @@ select target_dag.project_id,
     inner join redcap_data_access_groups target_dag on target_dag.group_name = source_dag.group_name
         where source_dag.project_id = 16
           and target_dag.project_id = 39
-          and source_record.dag_id in (769,146,156,743,789,780,212,314,273,1597,207,136,260,316,335,668,187,404,764,667,47,786)
+          and source_record.dag_id in (769,146,156,743,789,780,212,314,273,1597,207,136,260,316,335,668,187,764,667,47,786)
 ;
 
 -- this script copies specified records in redcap_data
@@ -89,7 +89,7 @@ where source_arm.project_id = 16
     select record from redcap_data
      where field_name = '__GROUPID__'
        and project_id = source_arm.project_id
-       and value in (769,146,156,743,789,780,212,314,273,1597,207,136,260,316,335,668,187,404,764,667,47,786) -- DAG ID to copy
+       and value in (769,146,156,743,789,780,212,314,273,1597,207,136,260,316,335,668,187,764,667,47,786) -- DAG ID to copy
   ) and field_name != '__GROUPID__'
 ;
 -- this script inserts the DAG info for each DAG into redcap_data
@@ -148,7 +148,7 @@ where source_arm.project_id = 16
     select record from redcap_data
      where field_name = '__GROUPID__'
        and project_id = source_arm.project_id
-       and value in (769,146,156,743,789,780,212,314,273,1597,207,136,260,316,335,668,187,404,764,667,47,786) -- DAG IDs to copy
+       and value in (769,146,156,743,789,780,212,314,273,1597,207,136,260,316,335,668,187,764,667,47,786) -- DAG IDs to copy
   ) and field_name = '__GROUPID__'
 ;
 -- this script copies the users over to the new project
@@ -191,5 +191,5 @@ inner join redcap_user_roles target_role
 where source_role.role_name = 'Data Entry'
       and source_dag.project_id = 16
       and target_dag.project_id = 39
-      and source_rights.group_id in (769,146,156,743,789,780,212,314,273,1597,207,136,260,316,335,668,187,404,764,667,47,786)
+      and source_rights.group_id in (769,146,156,743,789,780,212,314,273,1597,207,136,260,316,335,668,187,764,667,47,786)
 ;
