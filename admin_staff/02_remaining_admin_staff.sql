@@ -1,3 +1,5 @@
+INSERT INTO redcap_user_rights (project_id,username,role_id) VALUES (50, 'alison_gummery', 266);
+INSERT INTO redcap_user_rights (project_id,username,role_id) VALUES (51, 'alison_gummery', 276);
 INSERT INTO redcap_user_rights (project_id,username,role_id) VALUES (52, 'alison_gummery', 286);
 INSERT INTO redcap_user_rights (project_id,username,role_id) VALUES (53, 'alison_gummery', 296);
 INSERT INTO redcap_user_rights (project_id,username,role_id) VALUES (54, 'alison_gummery', 306);
@@ -227,14 +229,3 @@ INSERT INTO redcap_user_rights (project_id,username,role_id) VALUES (57, 'gary_l
 INSERT INTO redcap_user_rights (project_id,username,role_id) VALUES (58, 'gary_leeming', 342);
 INSERT INTO redcap_user_rights (project_id,username,role_id) VALUES (59, 'gary_leeming', 352);
 INSERT INTO redcap_user_rights (project_id,username,role_id) VALUES (60, 'gary_leeming', 362);
-INSERT INTO redcap_user_rights (project_id,username,role_id) VALUES (50, 'thomas.drake', 262);
-INSERT INTO redcap_user_rights (project_id,username,role_id) VALUES (51, 'thomas.drake', 272);
-INSERT INTO redcap_user_rights (project_id,username,role_id) VALUES (52, 'thomas.drake', 282);
-INSERT INTO redcap_user_rights (project_id,username,role_id) VALUES (53, 'thomas.drake', 292);
-INSERT INTO redcap_user_rights (project_id,username,role_id) VALUES (54, 'thomas.drake', 302);
-INSERT INTO redcap_user_rights (project_id,username,role_id) VALUES (55, 'thomas.drake', 312);
-INSERT INTO redcap_user_rights (project_id,username,role_id) VALUES (56, 'thomas.drake', 322);
-INSERT INTO redcap_user_rights (project_id,username,role_id) VALUES (57, 'thomas.drake', 332);
-INSERT INTO redcap_user_rights (project_id,username,role_id) VALUES (58, 'thomas.drake', 342);
-INSERT INTO redcap_user_rights (project_id,username,role_id) VALUES (59, 'thomas.drake', 352);
-INSERT INTO redcap_user_rights (project_id,username,role_id) VALUES (60, 'thomas.drake', 362);
