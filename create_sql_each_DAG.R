@@ -5,10 +5,6 @@ library(snakecase)
 # source project ID:
 source_id = 16
 # most target projects not created yet (except 37 North West and 39 West Midlands, testing only)
-regional_projects = tribble(~nhs_region, ~target_id,
-                            "North West", 37,
-                            "West Midlands", 39)
-
 
 # read in SQL templates include R-glue placeholders: {} ----
 sql_01 = read_file("01_redcap_record_list_copy.sql")
@@ -38,9 +34,28 @@ sql = paste(preamble, sql_01, sql_02, sql_03, sql_04, sep = "\n") %>%
 
 # create an SQL file for each region:
 system("mkdir regional_files")
-regions_lookup = read_csv("dags_regions.csv")
+regions_lookup_orig = read_csv("dags_regions.csv")
+dags_today = read_delim("check_dags_29-Sep.txt", delim = "\t")
 
+add_missing = tibble(dag_label = "Northamptonshire Healthcare Foundation Trust",
+                     nhs_region = "East Midlands",
+                     group_id = 2475)
+
+regions_lookup = bind_rows(regions_lookup_orig, add_missing) %>% 
+  filter(dag_label %in% dags_today$group_name)
+
+regions_lookup %>% 
+  distinct(nhs_region) %>% 
+  pull(nhs_region)
+
+regional_projects = tibble(nhs_region = regions_lookup %>% 
+                             distinct(nhs_region) %>% 
+                             pull(nhs_region),
+                           target_id = 50:60)
+
+id = 1
 for (myregion in regional_projects$nhs_region){
+  fileid = formatC(id, width = 2, flag = "0")
   print(myregion)
   target_id = regional_projects %>% 
     filter(nhs_region == myregion) %>% 
@@ -48,6 +63,7 @@ for (myregion in regional_projects$nhs_region){
   
   do_region = regions_lookup %>% 
     filter(nhs_region == myregion) %>%
+    arrange(group_id) %>% 
     select(nhs_region, DAG_name = dag_label, DAG_id = group_id)
   
   all_dags_within_region = do_region %>% 
@@ -65,7 +81,8 @@ for (myregion in regional_projects$nhs_region){
   
   all_in_one %>% 
     pull(sql_alldags) %>% 
-    write_file(paste0("regional_files/", to_snake_case(myregion), ".sql"))
+    write_file(paste0("regional_files/", fileid,"_",to_snake_case(myregion), ".sql"))
+  id = id + 1
   
   
 }

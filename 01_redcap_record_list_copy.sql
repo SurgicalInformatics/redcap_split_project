@@ -8,6 +8,7 @@
 -- After running this script, empty records (grey buttons)
 -- should show up in the interface
 
+-- SETs for TESTING only:
 SET @source_project = 16;
 SET @target_project = 39;
 -- just Birmingham:

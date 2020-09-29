@@ -10,7 +10,7 @@
 -- as well, as is done in the next script.
 -- The next script will move them into DAGs
 
-
+-- SETs for TESTING only:
 SET @source_project = 16;
 SET @target_project = 39;
 -- just Birmingham:

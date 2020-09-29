@@ -3,7 +3,7 @@
 -- This script copies
 -- All DAGs within this region
 -- data from the original (full) project to:
--- 'CCP UK SARI - North West'
+-- 'CCP UK SARI - Wales'
 
 -- this script copies specified records in redcap_record_list
 -- from Source project to Target project
@@ -15,6 +15,7 @@
 -- After running this script, empty records (grey buttons)
 -- should show up in the interface
 
+-- -- SETs for TESTING only:
 -- SET @source_project = 16;
 -- SET @target_project = 39;
 -- just Birmingham:
@@ -31,8 +32,8 @@ select target_dag.project_id,
     inner join redcap_data_access_groups source_dag on source_dag.group_id = source_record.dag_id
     inner join redcap_data_access_groups target_dag on target_dag.group_name = source_dag.group_name
         where source_dag.project_id = 16
-          and target_dag.project_id = 37
-          and source_record.dag_id in (160,99,122,276,597,805,236,213,422,549,470,267,37,547,239,603,293,128,107,55,375,181,179,291,110,242,233,333,52,398,790)
+          and target_dag.project_id = 59
+          and source_record.dag_id in (204,208,228,243,262,292,302,354,359,366,390)
 ;
 
 -- this script copies specified records in redcap_data
@@ -47,7 +48,7 @@ select target_dag.project_id,
 -- as well, as is done in the next script.
 -- The next script will move them into DAGs
 
-
+-- -- SETs for TESTING only:
 -- SET @source_project = 16;
 -- SET @target_project = 39;
 -- just Birmingham:
@@ -84,12 +85,12 @@ inner join redcap_events_metadata target_event
 
 -- Input parameters
 where source_arm.project_id = 16
-  and target_arm.project_id = 37
+  and target_arm.project_id = 59
   and record.record in (
     select record from redcap_data
      where field_name = '__GROUPID__'
        and project_id = source_arm.project_id
-       and value in (160,99,122,276,597,805,236,213,422,549,470,267,37,547,239,603,293,128,107,55,375,181,179,291,110,242,233,333,52,398,790) -- DAG ID to copy
+       and value in (204,208,228,243,262,292,302,354,359,366,390) -- DAG ID to copy
   ) and field_name != '__GROUPID__'
 ;
 -- this script inserts the DAG info for each DAG into redcap_data
@@ -100,7 +101,7 @@ where source_arm.project_id = 16
 -- @target_project = 68 -- Target project ID
 -- @DAG_ids = (5319, 5457) -- DAG IDs in the source project owning records to be copied
 
-
+-- -- SETs for TESTING only:
 -- SET @source_project = 16;
 -- SET @target_project = 39;
 -- just Birmingham:
@@ -143,18 +144,19 @@ inner join redcap_record_list target_list
 
 -- Input parameters
 where source_arm.project_id = 16
-  and target_arm.project_id = 37
+  and target_arm.project_id = 59
   and record.record in (
     select record from redcap_data
      where field_name = '__GROUPID__'
        and project_id = source_arm.project_id
-       and value in (160,99,122,276,597,805,236,213,422,549,470,267,37,547,239,603,293,128,107,55,375,181,179,291,110,242,233,333,52,398,790) -- DAG IDs to copy
+       and value in (204,208,228,243,262,292,302,354,359,366,390) -- DAG IDs to copy
   ) and field_name = '__GROUPID__'
 ;
 -- this script copies the users over to the new project
 -- it updates the role_id as well as the group_id
 -- this is the final script and project should be ready to go after this
 
+-- -- SETs for TESTING only:
 -- SET @source_project = 16;
 -- SET @target_project = 39;
 -- just Birmingham:
@@ -190,6 +192,6 @@ inner join redcap_user_roles target_role
 -- Parameters
 where source_role.role_name = 'Data Entry'
       and source_dag.project_id = 16
-      and target_dag.project_id = 37
-      and source_rights.group_id in (160,99,122,276,597,805,236,213,422,549,470,267,37,547,239,603,293,128,107,55,375,181,179,291,110,242,233,333,52,398,790)
+      and target_dag.project_id = 59
+      and source_rights.group_id in (204,208,228,243,262,292,302,354,359,366,390)
 ;

@@ -2,6 +2,7 @@
 -- it updates the role_id as well as the group_id
 -- this is the final script and project should be ready to go after this
 
+-- SETs for TESTING only:
 SET @source_project = 16;
 SET @target_project = 39;
 -- just Birmingham:

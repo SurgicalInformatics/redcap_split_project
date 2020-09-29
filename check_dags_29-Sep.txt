@@ -1,0 +1,222 @@
+group_id	project_id	group_name
+31	16	Nottingham University Hosptials NHS Trust
+32	16	Torbay and south Devon Hospital
+35	16	Yeovil District Hospital
+37	16	Manchester University NHS Foundation Trust
+39	16	York Teaching Hospital NHS Foundation Trust
+40	16	Barnsley Hospital NHS Foundation Trust
+41	16	Medway NHSFT
+42	16	Royal Surrey NHSFT
+43	16	Airedale General Hospital
+44	16	University Hospital Plymouth
+45	16	Royal Free Hospital
+46	16	Ipswich Hospital
+47	16	Birmingham Women's & Children's NHS Foundation Trust
+49	16	Oxford University Hospitals NHSFT
+51	16	Milton Keynes University Hospital
+52	16	Whiston Hospital
+55	16	Salford Royal NHSFT
+56	16	Royal Papworth Hospital NHSFT
+57	16	Poole Hospital NHST
+60	16	The Newcastle upon Tyne Hospitals NHSFT
+62	16	Frimley Health NHSFT
+65	16	Southmead Hospital
+71	16	Musgrove Park Hospital
+74	16	Hillingdon Hospital
+75	16	Guys and St Thomas
+80	16	Brighton and Sussex University Hospitals NHST
+84	16	Sheffield Teaching Hospitals NHS Foundation Trust
+89	16	Northern Devon Healthcare Trust
+93	16	Kettering General Hospital NHSFT
+95	16	Gloucester Royal Hospital
+98	16	Homerton University Hospital
+99	16	Alder Hey Children's Hospital
+101	16	Queen Elizabeth University Hospital, Glasgow University Hospital Monklands Airdrie
+106	16	East Kent Hospitals NHSFT
+107	16	Royal Preston Hospital
+109	16	Aberdeen Royal Infirmary
+110	16	The Pennine Acute Hospitals NHS Trust
+111	16	University Hospital Southampton NHS Foundation Trust
+114	16	Northwick Park
+115	16	Maidstone and Tunbridge Wells NHST
+117	16	Ninewells Hospital
+120	16	West Suffolk Hospital
+121	16	Hull University Teaching Hospitals
+122	16	Blackpool Teaching Hospitals NHSFT
+123	16	Royal Berkshire Hospital
+127	16	Royal Devon and Exeter Hospital
+128	16	Royal Liverpool & Broadgreen University Hospitals NHSFT
+130	16	The Princess Alexandra Hospital
+132	16	King's College Hospital
+136	16	University Hospitals Coventry and Warwickshire NHS Trust
+140	16	Chelsea & Westminster Hospital
+144	16	University Hospital of North Tees
+145	16	Epsom & St Helier NHSFT
+146	16	George Eliot Hospital
+147	16	Portsmouth Hospitals NHS Trust
+150	16	Mid and South Essex University Hospitals Group
+151	16	Hampshire Hospitals NHS Foundation Trust
+152	16	West Hertfordshire Hospitals NHST
+153	16	Barts Health NHS Trust
+156	16	Hereford Hospital
+160	16	Aintree University Hospital
+168	16	Imperial College Healthcare NHST
+179	16	Tameside Hospital Integrated Care NHSFT
+180	16	Royal United Hospitals Bath NHSFT
+181	16	Stockport NHSFT
+182	16	University Hospitals of Leicester
+183	16	Glasgow Royal Infirmary
+187	16	Walsall Healthcare NHST
+192	16	Barking Havering and Redbridge University NHST
+197	16	Norfolk and Norwich University Hospital NHSFT
+201	16	North Cumbria Integrated Care NHSFT
+204	16	Prince Philip Hospital
+207	16	The Royal Wolverhampton NHS Trust
+208	16	Cardiff and Vale University Health Board
+212	16	Sandwell and West Birmingham NHST
+213	16	East Lancashire Hospitals NHST
+216	16	Victoria Hospital Kirkcaldy
+224	16	The Royal Marsden NHST
+228	16	Glangwili General Hospital
+233	16	University Hospitals Of Morecambe Bay
+235	16	Gateshead Health NHSFT
+236	16	Countess Of Chester Hospital
+239	16	Mid Cheshire Hospital Trust
+241	16	West Cumberland Hospital
+242	16	The Royal Oldham Hospital
+243	16	Betsi Cadwaladr University Health Board
+244	16	Addenbrookes Hospital
+245	16	Mid Yorkshire Hospitals NHST
+250	16	Bradford Teaching Hospitals NHSFT
+251	16	Darlington Memorial Hospital
+258	16	Ashford and St Peters Hospital NHSFT
+260	16	University Hospitals of North Midlands NHST
+262	16	Morriston Hospital, Swansea
+265	16	Sherwood Forest Hospitals NHSFT
+267	16	Macclesfield District General Hospital
+268	16	University Hospital of North Durham
+270	16	The Rotherham NHSFT
+271	16	Whittington Health NHST
+273	16	The Dudley Group NHSFT
+276	16	Bolton NHST
+278	16	North Middlesex University Hospital NHST
+282	16	Bristol Royal Infirmary
+284	16	Leeds Teaching Hospitals NHST
+285	16	North West Anglia NHSFT
+286	16	East and North Hertfordshire NHST
+287	16	University College London Hospitals NHSFT
+289	16	Buckinghamshire Healthcare NHS Trust
+291	16	The Christie NHSFT
+292	16	Glan Clwyd Hospital
+293	16	Royal Albert Edward Infirmary
+296	16	Northern Lincolnshire and Goole NHSFT
+300	16	Great Ormond Street Hospital
+302	16	Withybush General Hospital
+307	16	United Lincolnshire Hospital NHST
+311	16	James Paget University Hospitals
+312	16	St Bartholomews
+313	16	Harrogate District Hospital
+314	16	Shrewsbury & Telford Hospital NHST
+316	16	Warwick Hospital
+318	16	Chesterfield Royal Hospital NHSFT
+324	16	Western Sussex Hospitals NHSFT
+328	16	Bedfordshire Hospitals NHS Foundation Trust
+330	16	Royal Bournemouth and Christchurch Hospitals NHS Foundation Trust
+333	16	Warrington and Halton Teaching Hospitals NHS Foundation Trust
+334	16	Sheffield Children's NHS Foundation Trust
+335	16	Worcestershire Acute Hospitals NHS Trust
+338	16	Lewisham and Greenwich NHS Trust
+339	16	Northampton General Hospital NHS Trust
+354	16	Cwm Taf Morgannwg University Health Board
+357	16	South Tees Hospital NHS Foundation Trust
+359	16	Aneurin Bevan University Health Board
+361	16	Dorset County Hospital NHFT
+363	16	Surrey and Sussex Healthcare NHST
+366	16	Bronglais General Hospital
+368	16	Royal Brompton and Harefield NHFT
+370	16	University Hospitals of Derby and Burton NHFT
+375	16	Southport and Ormskirk Hospital NHS Trust
+380	16	East Suffolk and North Essex NHFT
+388	16	The Queen Elizabeth Hospital King's Lynn NHS Foundation Trust
+390	16	Wrexham Maelor Hospital
+392	16	University Hospitals Bristol NHFT
+398	16	Wirral University Teaching Hospital NHFT
+399	16	Doncaster and Bassetlaw Teaching Hospitals NHFT
+403	16	East Sussex Healthcare NHS Trust
+404	16	University Hospitals Birmingham NHS Foundation Trust
+422	16	Fairfield General Hospital
+429	16	Basildon and Thurrock University Hospitals NHS
+468	16	Great Western NHS FT
+470	16	Liverpool Women's Hospital
+471	16	Northumbria Healthcare NHS Trust
+542	16	Calderdale and Huddersfield NHS Trust
+544	16	Luton and Dunstable
+545	16	Borders General Hospital
+547	16	Merseycare NHS Foundation Trust
+549	16	Lancashire & South Cumbria NHS Foundation Trust
+551	16	Croydon Health Services NHS Trust
+555	16	NIHR Team (Wessex)
+564	16	Royal Cornwall
+584	16	NHS Lanarkshire
+597	16	Cheshire and Wirral Partnership NHSFT
+598	16	Weston Area Health NHS Trust
+599	16	NHS Ayrshire and Arran
+601	16	NHS Dumfries and Galloway
+602	16	Isle of Wight NHS Trust
+603	16	North West Boroughs Healthcare NHSFT
+620	16	NHS Lothian
+665	16	Southern Health NHS Foundation Trust
+666	16	Gloucestershire Health and Care NHS Foundation Trust
+667	16	Birmingham Community Healthcare NHS Foundation Trust
+668	16	Worcestershire Health and Care NHS Trust
+670	16	South West Yorkshire Partnership NHS Foundation Trust
+683	16	Tees, Esk and Wear Valleys NHS Foundation Trust
+685	16	Cumbria, Northumberland, Tyne and Wear NHS Foundation Trust
+686	16	Cambridge and Peterborough NHS Foundation Trust
+712	16	Kingston Hospital NHS Foundation Trust
+716	16	Sheffield Health
+732	16	Humber Teaching NHS Foundation Trust
+740	16	Devon Partnership NHS Trust
+742	16	Leeds and York Partnership NHS Foundation Trust
+743	16	Midlands Partnership NHS Foundation Trust
+744	16	Dartford and Gravesham NHS Trust
+746	16	Livewell Southwest
+747	16	Golden Jubilee National Hospital
+748	16	St George's University Hospitals NHS Foundation Trust
+749	16	Hertfordshire Partnership NHS Foundation Trust
+750	16	Norfolk and Suffolk NHS Foundation Trust
+752	16	Cornwall Partnership NHSFT
+759	16	South Tyneside and Sunderland NHS Foundation Trust
+760	16	London North West University Healthcare NHS Trust
+763	16	Medway Community Healthcare
+764	16	Birmingham and Solihull Mental Health NHSFT
+765	16	Rotherham Doncaster and South Humber NHSFT
+767	16	NHS Forth Valley
+769	16	Coventry & Warwickshire Partnership Trust
+779	16	Sussex Community NHSFT
+780	16	Robert Jones & Agnes Hunt Orthopaedic Hospital NHS Foundation Trust
+786	16	Black Country Healthcare NHS Foundation Trust
+787	16	Shropshire Community Health NHS Trust
+789	16	North Staffordshire Combined Healthcare NHS Trust
+802	16	NHS Highland
+804	16	South West London and St George's Mental Health NHS Trust
+805	16	Clatterbridge Cancer Centre NHSFT
+806	16	Bradford District Care NHS Foundation Trust
+807	16	Nottinghamshire Healthcare NHS Foundation Trust
+808	16	Leicestershire Partnership NHS Trust
+810	16	Solent NHS Trust
+937	16	Hounslow and Richmond Community Healthcare NHS Trust
+948	16	Lincolnshire Community Health Services NHST
+949	16	Lincolnshire Partnership Foundation Trust
+957	16	Sussex Partnership NHS Foundation Trust
+964	16	Dorset HealthCare University NHS Foundation Trust
+1198	16	Derbyshire Healthcare NHSFT
+1345	16	Leeds community healthcare NHSFT
+1580	16	Kent and Medway NHS and Social Care Partnership Trust
+1581	16	NI Southern Trust
+1587	16	Surrey and Borders partnership NHSFT
+1591	16	Norfolk Community Health and Care NHS Trust
+1597	16	The Royal Orthopaedic Hospital NHS Foundation Trust
+1612	16	Belfast
+2470	16	NI Western Trust
+2475	16	Northamptonshire Healthcare Foundation Trust

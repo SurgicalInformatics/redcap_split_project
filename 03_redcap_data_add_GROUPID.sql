@@ -6,7 +6,7 @@
 -- @target_project = 68 -- Target project ID
 -- @DAG_ids = (5319, 5457) -- DAG IDs in the source project owning records to be copied
 
-
+-- SETs for TESTING only:
 SET @source_project = 16;
 SET @target_project = 39;
 -- just Birmingham:
