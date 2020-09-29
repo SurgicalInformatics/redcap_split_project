@@ -37,11 +37,8 @@ system("mkdir regional_files")
 regions_lookup_orig = read_csv("dags_regions.csv")
 dags_today = read_delim("check_dags_29-Sep.txt", delim = "\t")
 
-add_missing = tibble(dag_label = "Northamptonshire Healthcare Foundation Trust",
-                     nhs_region = "East Midlands",
-                     group_id = 2475)
 
-regions_lookup = bind_rows(regions_lookup_orig, add_missing) %>% 
+regions_lookup = regions_lookup_orig %>% 
   filter(dag_label %in% dags_today$group_name)
 
 regions_lookup %>% 
