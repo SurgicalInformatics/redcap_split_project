@@ -45,12 +45,21 @@ regions_lookup %>%
   distinct(nhs_region) %>% 
   pull(nhs_region)
 
-regional_projects = tibble(nhs_region = regions_lookup %>% 
-                             distinct(nhs_region) %>% 
-                             pull(nhs_region),
-                           target_id = 50:60)
+# regional_projects = tibble(nhs_region = regions_lookup %>% 
+#                              distinct(nhs_region) %>% 
+#                              pull(nhs_region),
+#                            target_id = 50:60)
+
+regional_projects = tibble(nhs_region = "Northern Ireland",
+                           target_id = 62)
 
 id = 1
+# regional_projects %>% 
+#   rowid_to_column() %>% 
+#   mutate(rowid = formatC(rowid, width = 2, flag = "0")) %>% 
+#   mutate(name = paste("ccp", rowid, to_snake_case(nhs_region), sep = "_") %>% paste("=")) %>%
+#   select(name)
+
 for (myregion in regional_projects$nhs_region){
   fileid = formatC(id, width = 2, flag = "0")
   print(myregion)
@@ -78,7 +87,7 @@ for (myregion in regional_projects$nhs_region){
   
   all_in_one %>% 
     pull(sql_alldags) %>% 
-    write_file(paste0("regional_files/", fileid,"_",to_snake_case(myregion), ".sql"))
+    write_file(paste0("fix/", fileid,"_",to_snake_case(myregion), ".sql"))
   id = id + 1
   
   
