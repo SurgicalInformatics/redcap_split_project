@@ -50,8 +50,8 @@ regions_lookup %>%
 #                              pull(nhs_region),
 #                            target_id = 50:60)
 
-regional_projects = tibble(nhs_region = "Northern Ireland",
-                           target_id = 62)
+regional_projects = tibble(nhs_region = "South West",
+                           target_id = 63)
 
 id = 1
 # regional_projects %>% 
