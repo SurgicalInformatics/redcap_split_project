@@ -40,7 +40,7 @@ inner join redcap_record_list target_list
 
 -- Input parameters
 where source_arm.project_id = 16
-  and target_arm.project_id = 54
+  and target_arm.project_id = 61
   and record.record in (
     select record from redcap_data
      where field_name = '__GROUPID__'
